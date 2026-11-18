@@ -1,0 +1,22 @@
+Pictures and case text in set B: MultiCaRe (OpenMed/multicare-images, multicare-cases), from PubMed Central open-access case reports. Each item keeps its original licence:
+
+B01: PMC4614617 (CC BY-NC), image file_0046357
+B02: PMC8146748 (CC BY-NC), image file_0118121
+B03: PMC11380825 (CC BY-NC-SA), image file_0161545
+B04: PMC10166827 (CC BY), image file_0004076
+B05: PMC8294840 (CC BY), image file_0121165
+B06: PMC8565686 (CC BY-NC), image file_0126355
+B07: PMC9108163 (CC BY), image file_0133259
+B08: PMC6262945 (CC BY-NC-SA), image file_0086409
+B09: PMC10242075 (CC BY), image file_0005998
+B10: PMC5998291 (CC BY), image file_0081830
+B11: PMC6332770 (CC BY), image file_0087931
+B12: PMC8462861 (CC BY-NC), image file_0124435
+B13: PMC10224678 (CC BY-NC), image file_0005506
+B14: PMC9195086 (CC BY-NC), image file_0134231
+B15: PMC10787518 (CC BY), image file_0143861
+B16: PMC5989252 (CC BY), image file_0081471
+B17: PMC6814919 (CC BY), image file_0097799
+B18: PMC6446494 (CC BY), image file_0091464
+B19: PMC8106801 (CC BY), image file_0117338
+B20: PMC7718122 (CC BY), image file_0112649

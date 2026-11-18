@@ -1,0 +1,31 @@
+﻿case,set,source,source_id,true_level,true_urgent,picture,picture_type,what_the_picture_shows (published caption)
+A01,A text+vitals,nhamcs,nhamcs_2916,3,no,,,
+A02,A text+vitals,nhamcs,nhamcs_4623,4,no,,,
+A03,A text+vitals,nhamcs,nhamcs_3201,2,yes,,,
+A04,A text+vitals,nhamcs,nhamcs_6290,3,no,,,
+A07,A text+vitals,nhamcs,nhamcs_3171,4,no,,,
+A09,A text+vitals,nhamcs,nhamcs_255,2,yes,,,
+A13,A text+vitals,nhamcs,nhamcs_1175,3,no,,,
+A15,A text+vitals,nhamcs,nhamcs_6535,2,yes,,,
+A18,A text+vitals,nhamcs,nhamcs_3349,2,yes,,,
+A20,A text+vitals,nhamcs,nhamcs_4794,2,yes,,,
+B01,B all 3,multicare,PMC4614617_01,unknown,unknown,B01_ecg.jpg,ecg,The 12- lead patient's Electrocardiogram.
+B02,B all 3,multicare,PMC8146748_01,unknown,unknown,B02_ultrasound.jpg,ultrasound,Ultrasound (US) images of a 25-year-old woman with a mature cystic teratoma. B-mode transabdominal US image showing a heterogeneous lesion with an echogenic mural nodule (dermoid plug) (red arrow).
+B03,B all 3,multicare,PMC11380825_01,unknown,unknown,B03_ct.jpg,ct,"Non-contrast computed tomography of the head during the initial presentation, where there was no evidence of an acute hemorrhage, ischemia, or other processes."
+B04,B all 3,multicare,PMC10166827_01,unknown,unknown,B04_ecg.jpg,ecg,"ECG in the ER before the coronary angiogram. ECG showing AF, complete heart block, junctional escape rhythm, and ST-segment elevation in leads II, III, aVF, and V3R-V5R."
+B05,B all 3,multicare,PMC8294840_01,unknown,unknown,B05_ct.jpg,ct,Computed tomographic scan of the abdomen and pelvis revealing cecal bascule herniation through the Foramen of Winslow.
+B06,B all 3,multicare,PMC8565686_01,unknown,unknown,B06_x_ray.jpg,x_ray,Postprocedure chest radiography.
+B07,B all 3,multicare,PMC9108163_01,unknown,unknown,B07_ecg.jpg,ecg,"12-lead electrocardiogram obtained at admission, showing sinus tachycardia, T wave inversion in left precordial, inferior and lateral leads, and a prolonged corrected QT."
+B08,B all 3,multicare,PMC6262945_01,unknown,unknown,B08_x_ray.jpg,x_ray,AP CXR status post pacemaker placement.
+B09,B all 3,multicare,PMC10242075_01,unknown,unknown,B09_ultrasound.jpg,ultrasound,Apical four-chamber view.
+B10,B all 3,multicare,PMC5998291_01,unknown,unknown,B10_x_ray.jpg,x_ray,Ulceration and necrosis of the left lower extremity overlying calciphylaxis.
+B11,B all 3,multicare,PMC6332770_01,unknown,unknown,B11_ct.jpg,ct,CT abdomen and pelvis coronal view demonstrating minimal ascites around liver.
+B12,B all 3,multicare,PMC8462861_01,unknown,unknown,B12_x_ray.jpg,x_ray,"Chest radiographs of CMV pneumonia. (a) Initial chest radiograph with extensive right lung opacities, most prominent in the right middle lobe."
+B13,B all 3,multicare,PMC10224678_01,unknown,unknown,B13_ultrasound.jpg,ultrasound,The clinical course (PLT) of the patient with MSSA SCAP after corresponding treatment.
+B14,B all 3,multicare,PMC9195086_01,unknown,unknown,B14_ct.jpg,ct,Axial Section of the chest CT showing Aortic thrombus.
+B15,B all 3,multicare,PMC10787518_01,unknown,unknown,B15_ultrasound.jpg,ultrasound,Dilated right ventricle with McConnell's sign.
+B16,B all 3,multicare,PMC5989252_01,unknown,unknown,B16_x_ray.jpg,x_ray,Thorax X-ray at the arrival.
+B17,B all 3,multicare,PMC6814919_01,unknown,unknown,B17_x_ray.jpg,x_ray,"Preoperative erect chest x-ray of case 1 showing an irregularly shaped homogenous opacity in the right lower zone, loss of the right hemidiaphragmatic contour, a chest tube and minimal subcutaneous emphysema. Preoperative chest CT scan of case 1 showing a complete rupture of right hemidiaphragm with herniated liver with capsular laceration."
+B18,B all 3,multicare,PMC6446494_01,unknown,unknown,B18_ct.jpg,ct,CT Pulmonary Angiogram showing non-lumen occluding thrombus (indicated by red arrows) in the right and left main pulmonary trunk.
+B19,B all 3,multicare,PMC8106801_01,unknown,unknown,B19_x_ray.jpg,x_ray,"chest X-ray showing right basal pulmonary opacity, cardiomegaly at the expense of the right cavities, convex left middle arch."
+B20,B all 3,multicare,PMC7718122_01,unknown,unknown,B20_ct.jpg,ct,Coronal enhanced computed tomography scan of the abdomen showing an obstructing transverse colon mass (arrow).

@@ -1,0 +1,6 @@
+models/
+cato/
+detector/data/
+detector/runs/
+*.pt
+__pycache__/

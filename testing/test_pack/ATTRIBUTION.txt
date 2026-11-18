@@ -1,0 +1,22 @@
+Pictures (all CC BY 4.0; used for testing only, not for diagnosis):
+  adult_ankle_fracture.jpg: FracAtlas (Abedeen et al. 2023, CC BY 4.0), test split
+  adult_leg_fracture_missed.jpg: FracAtlas (Abedeen et al. 2023, CC BY 4.0), test split
+  adult_leg_no_fracture.jpg: FracAtlas (Abedeen et al. 2023, CC BY 4.0), test split
+  child_wrist_fracture.png: GRAZPEDWRI-DX (Nagy et al. 2022, CC BY 4.0), test split
+  child_wrist_normal.png: GRAZPEDWRI-DX (Nagy et al. 2022, CC BY 4.0), test split
+  cxr_pneumothorax.jpg: MultiCaRe case-report figures (Nievas Offidani & Delrieux 2024, CC BY 4.0)
+  cxr_pneumothorax_resolved.jpg: MultiCaRe case-report figures (Nievas Offidani & Delrieux 2024, CC BY 4.0)
+  cxr_effusion.jpg: MultiCaRe case-report figures (Nievas Offidani & Delrieux 2024, CC BY 4.0)
+  child_cxr_pneumonia.jpg: Kermany et al. 2018 pediatric chest X-rays (CC BY 4.0), test split
+  child_cxr_normal.jpg: Kermany et al. 2018 pediatric chest X-rays (CC BY 4.0), test split
+  ct_head_bleed_epidural.jpg: MultiCaRe case-report figures (Nievas Offidani & Delrieux 2024, CC BY 4.0)
+  ct_head_bleed_subdural.jpg: MultiCaRe case-report figures (Nievas Offidani & Delrieux 2024, CC BY 4.0)
+  ct_head_normal.jpg: MultiCaRe case-report figures (Nievas Offidani & Delrieux 2024, CC BY 4.0)
+  ct_chest.jpg: MultiCaRe case-report figures (Nievas Offidani & Delrieux 2024, CC BY 4.0)
+  mri_spine.jpg: MultiCaRe case-report figures (Nievas Offidani & Delrieux 2024, CC BY 4.0)
+  ultrasound_heart.jpg: MultiCaRe case-report figures (Nievas Offidani & Delrieux 2024, CC BY 4.0)
+  ecg.jpg: MultiCaRe case-report figures (Nievas Offidani & Delrieux 2024, CC BY 4.0)
+  photo_not_a_scan.jpg: MultiCaRe case-report figures (Nievas Offidani & Delrieux 2024, CC BY 4.0)
+
+Notes T01-T10 and P01-P18 were written for this test. Notes R01-R10 are held-out test patients from KTAS (Moon et al. 2019, Kaggle), NHAMCS 2022 (CDC, public domain) and MultiCaRe case reports (CC BY 4.0).
+These are not real patients of ours. This app is a student research prototype, not a medical device.

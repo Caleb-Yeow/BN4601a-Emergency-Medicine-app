@@ -1,0 +1,10 @@
+step,images,cases,articles
+all images,161702,42044,38832
+licence allows reuse,121710,30972,28561
+"A&E modality (X-ray/CT/US, acute photo)",43099,17071,16069
+caption >= 20 chars,41738,16922,15941
+"not a later-stage image (post-op, follow-up, healed)",37663,16354,15442
+linked to a case,37663,16354,15442
+age >= 16,30762,13208,12565
+presented to emergency department,5492,2374,2314
+>= 1 measured vital sign(s) in text,2340,1015,989

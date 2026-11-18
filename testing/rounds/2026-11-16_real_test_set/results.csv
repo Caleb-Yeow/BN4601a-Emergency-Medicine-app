@@ -1,0 +1,41 @@
+﻿case,set,source,true_level,true_urgent,status,app_level,app_urgent,group,picture_type_in_key,picture_sorted_as,picture_marks,seconds,review
+A01,A text+vitals,nhamcs,3,no,done,2,yes,Urgent,,,,76,"Over-triaged by 1. 'Unconscious on arrival' was read as unresponsive, which explains the flag. Chest-pain ECG to-do not supported by the note; 'last seen well' and 'last known well' both asked."
+A02,A text+vitals,nhamcs,4,no,done,4,no,Minor,,,,92,Level right. BP also copied under Investigations (cosmetic).
+A03,A text+vitals,nhamcs,2,yes,done,2,yes,Urgent,,,,86,Level and flag right; chest-pain to-dos fit.
+A04,A text+vitals,nhamcs,3,no,done,2,yes,Urgent,,,,74,"Over-triaged by 1. Seizure questions and to-do, but no seizure in the note."
+A05,A text+vitals,ktas,4,no,done,4,no,Minor,,,,84,Level right.
+A06,A text+vitals,ktas,3,no,done,4,no,Minor,,,,73,Under-triaged by 1 (not urgent either way). Severely raised BP produced no warning; sepsis to-do not supported.
+A07,A text+vitals,nhamcs,4,no,done,3,no,Can wait,,,,76,"One level high, not flagged. Chest-pain questions and ECG to-do not supported by the note."
+A08,A text+vitals,ktas,2,yes,done,2,yes,Urgent,,,,82,Level and flag right.
+A09,A text+vitals,nhamcs,2,yes,done,2,yes,Urgent,,,,84,Level and flag right.
+A10,A text+vitals,ktas,2,yes,done,2,yes,Urgent,,,,75,Level and flag right.
+A11,A text+vitals,ktas,4,no,done,4,no,Minor,,,,80,Level right. Source note has no complaint ('nan'): the app used the pain score as the complaint and did not ask why the patient came.
+A12,A text+vitals,ktas,4,no,done,4,no,Minor,,,,87,Level right. Blank 'Not recorded' lines in Observations; full sepsis bundle looks heavy for this presentation.
+A13,A text+vitals,nhamcs,3,no,done,2,yes,Urgent,,,,77,Over-flagged at a 12% score (the 9-in-10 cut-off).
+A14,A text+vitals,ktas,3,no,done,4,no,Minor,,,,80,Under-triaged by 1 (not urgent either way).
+A15,A text+vitals,nhamcs,2,yes,done,2,yes,Urgent,,,,80,Level and flag right. No bleeding to-dos for melena; triage text leaked into Observations.
+A16,A text+vitals,ktas,1,yes,done,1,yes,Urgent,,,,61,Level 1 right. MedGemma misread consciousness; the rules read it correctly and the tile says check. Duplicate 'last well' questions.
+A17,A text+vitals,ktas,2,yes,done,2,yes,Urgent,,,,88,Level and flag right; sepsis to-dos fit. Triage text leaked into Observations.
+A18,A text+vitals,nhamcs,2,yes,done,2,yes,Urgent,,,,80,Level and flag right; to-dos fit. Triage text leaked into Observations.
+A19,A text+vitals,ktas,2,yes,done,2,yes,Urgent,,,,92,Level and flag right; to-dos fit.
+A20,A text+vitals,nhamcs,2,yes,done,2,yes,Urgent,,,,98,"Level and flag right. Stroke to-do, but no ECG despite marked tachycardia. Triage text leaked into Observations."
+B01,B all 3,multicare,unknown,unknown,done,2,yes,Urgent,ecg,ecg,,145,Urgent is reasonable. ECG reading looks like a template; AF and ST changes are unsupported by the paper's caption.
+B02,B all 3,multicare,unknown,unknown,done,3,no,Can wait,ultrasound,ultrasound,,164,"POSSIBLE UNDER-TRIAGE: peritonitis signs and abnormal vitals, but level 3. Ultrasound checklist suggests pericardial findings on a pelvic scan."
+B03,B all 3,multicare,unknown,unknown,done,2,yes,Urgent,ct,ct_slice,,159,"Urgent is reasonable; head CT unmarked, matching the paper."
+B04,B all 3,multicare,unknown,unknown,done,2,yes,Urgent,ecg,ecg,,126,"Urgent, but arguably level 1 (shock, heart block, STEMI). ECG reading contradicts the paper: says fast rate and inferior ST depression."
+B05,B all 3,multicare,unknown,unknown,done,2,yes,Urgent,ct,ct_slice,,202,"Urgent is reasonable. CT reading is made up: 'celiac bascule' and gastric bypass, while the note says no surgery and the paper says cecal bascule."
+B06,B all 3,multicare,unknown,unknown,done,2,yes,Urgent,x_ray,chest_xray,RED Pneumonia-type shadowing; amber Pneumothorax,222,"Urgent is reasonable; shadowing may be real. Note says WITHOUT chest pain, but chest-pain questions and ECG to-do appear (negation missed)."
+B07,B all 3,multicare,unknown,unknown,done,2,yes,Urgent,ecg,ecg,,264,"Urgent is reasonable. ECG reading wrong: says irregular/AF/ST elevation; paper says sinus tachycardia, T inversion, long QT."
+B08,B all 3,multicare,unknown,unknown,done,1,yes,Urgent,x_ray,chest_xray,amber Pneumothorax,349,"Level 1 reasonable. HR WRONG on tile: baseline 50 shown, ER 30-40 discarded by the word check. 'Unresponsive' overstates a confused patient. Pacemaker recognised."
+B09,B all 3,multicare,unknown,unknown,done,2,yes,Urgent,ultrasound,ultrasound,,385,Urgent is reasonable; echo view roughly right. Ambulance value discarded although EMS transported him; pain question not supported.
+B10,B all 3,multicare,unknown,unknown,done,2,yes,Urgent,x_ray,other,,510,"Sorted 'other', which is CORRECT: the picture is a leg photo and the answer key's 'x_ray' label is wrong. Reading matches the paper."
+B11,B all 3,multicare,unknown,unknown,done,3,no,Can wait,ct,ct_slice,,405,Level 3 reasonable. Temperature conflict correctly flagged. CT checklist's bowel obstruction and liver mass are unsupported.
+B12,B all 3,multicare,unknown,unknown,done,1,yes,Urgent,x_ray,chest_xray,RED Pleural effusion; RED Atelectasis; amber Pneumothorax,170,Level 1 right. No oxygen or breathing to-do at SpO2 70%. Sex discarded by the word check.
+B13,B all 3,multicare,unknown,unknown,done,2,yes,Urgent,ultrasound,ecg,,241,Picture is a chart (the key's 'ultrasound' label is wrong). Sorted as ECG and an ECG reading was INVENTED for it.
+B14,B all 3,multicare,unknown,unknown,done,2,yes,Urgent,ct,ct_slice,,203,Urgent is right. Head-CT bleed check ran on a chest CT. Paper's aortic thrombus missed.
+B15,B all 3,multicare,unknown,unknown,done,2,yes,Urgent,ultrasound,ultrasound,,364,Urgent is reasonable. Age and sex discarded by the word check. Echo reading says pericardial effusion and misses the dilated right ventricle in the paper.
+B16,B all 3,multicare,unknown,unknown,done,2,yes,Urgent,x_ray,chest_xray,RED Pneumothorax; RED Pneumonia-type shadowing; RED Nodule/mass,337,Picture rule worked (red pneumothorax moved the patient up). Trauma to-do and mechanism question despite 'without any notion of trauma' (negation missed).
+B17,B all 3,multicare,unknown,unknown,not run (test paused),,,,,,,,
+B18,B all 3,multicare,unknown,unknown,not run (test paused),,,,,,,,
+B19,B all 3,multicare,unknown,unknown,not run (test paused),,,,,,,,
+B20,B all 3,multicare,unknown,unknown,not run (test paused),,,,,,,,

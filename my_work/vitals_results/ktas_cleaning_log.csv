@@ -1,0 +1,17 @@
+﻿step,column,n_rows,detail
+rename,all,1267,columns renamed to snake_case
+placeholder -> missing,chief_complaint,5,'??'
+placeholder -> missing,nrs_pain,556,'#BOŞ!'
+placeholder -> missing,sbp,25,'??'
+placeholder -> missing,dbp,29,'??'
+placeholder -> missing,hr,20,'??'
+placeholder -> missing,rr,22,'??'
+placeholder -> missing,temp_c,18,'??'
+placeholder -> missing,spo2,9,'??'
+trailing dot,dbp,1,e.g. '36.' read as 36.0
+trailing dot,temp_c,3,e.g. '36.' read as 36.0
+merge duplicate visits,diagnosis,5,10 rows had identical triage data and differed only in diagnosis; diagnoses joined with ' | '
+implausible -> missing,spo2,1,outside 50-100: [20.0]
+logical fill,nrs_pain,550,pain = no -> NRS 0
+left missing,nrs_pain,3,pain = yes but no score recorded
+flag,age,13,aged 16-17 (study counted >=15 as adult); kept

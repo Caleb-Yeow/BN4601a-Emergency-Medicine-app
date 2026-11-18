@@ -1,0 +1,86 @@
+From fbdd1f2c560dd7746ba43361382a313bea5a2e20 Mon Sep 17 00:00:00 2001
+From: Caleb Yeow <64772654+Caleb-Yeow@users.noreply.github.com>
+Date: Mon, 16 Nov 2026 16:03:34 +0800
+Subject: [PATCH] Chat: answer diagnosis and medication questions (Caleb, 16
+ Nov)
+
+Asked for a diagnosis or medication, the chat only summarised the record
+("Use only information in the record" read as "never suggest a diagnosis
+or a drug"), twice word for word on P3.
+
+- VISIT_CHAT_SYSTEM: patient facts still only from the record ('not
+  recorded' if missing), but medical knowledge is now asked for: top 3
+  possible diagnoses with supporting findings and the confirming test;
+  usual first-line ED treatment with adult dose/route and what to check
+  first, labelled for the clinician to confirm. Answer first, no record
+  summary, answer the likely meaning of typos, max 8 bullets. NEWS2
+  bands 0-4 low, 5-6 medium, 7+ high (it called NEWS2 6 "low").
+- _turn(): always use the current system prompt, so saved conversations
+  pick up the new instructions.
+
+Tried and dropped: chat on plain MedGemma (no task adapter) was worse
+(record summaries, refusals, repetition loops).
+
+test_app.py: 122 PASS, 0 FAIL.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+---
+ reasoning/src/pipeline.py |  2 ++
+ reasoning/src/prompts.py  | 27 ++++++++++++++++++++-------
+ 2 files changed, 22 insertions(+), 7 deletions(-)
+
+diff --git a/reasoning/src/pipeline.py b/reasoning/src/pipeline.py
+index 9242ac5..5d59608 100644
+--- a/reasoning/src/pipeline.py
++++ b/reasoning/src/pipeline.py
+@@ -226,6 +226,8 @@ class EDPipeline:
+             question = f"{visit.record()}\n\n{question}"
+         elif visit.unseen:                               # later turns: only what's new since the last answer
+             question = "New results added to the record:\n" + "\n".join(visit.unseen) + f"\n\n{question}"
++        # a saved conversation keeps the instructions it started with; always use the current ones (16 Nov)
++        visit.messages[0] = {"role": "system", "content": [{"type": "text", "text": VISIT_CHAT_SYSTEM}]}
+         visit.unseen = []
+         visit.messages.append({"role": "user", "content": [{"type": "text", "text": question}]})
+         answer = final_answer(self._ask(visit.messages, step)) or NO_ANSWER
+diff --git a/reasoning/src/prompts.py b/reasoning/src/prompts.py
+index e3e5546..e599dfa 100644
+--- a/reasoning/src/prompts.py
++++ b/reasoning/src/prompts.py
+@@ -39,14 +39,27 @@ CHAT_SYSTEM = (
+ # the app's chat: the record also holds results that arrive during the visit
+ VISIT_CHAT_SYSTEM = CHAT_SYSTEM + (
+     " The urgency decision in the record comes from a validated score: never lower it. New results may raise concern; "
+-    "say so clearly for the clinician to review. Use only information in the record or the conversation, "
+-    "and say 'not recorded' when something is missing. "
++    "say so clearly for the clinician to review. "
++    # Caleb 16 Nov: asked for a diagnosis and medication, the chat only summarised the record (twice, word for word):
++    # "use only information in the record" read as "never suggest a diagnosis or a drug". Facts about the patient
++    # still come only from the record; medical knowledge (possible diagnoses, usual treatment) is now asked for.
++    "Facts about THIS patient (numbers, history, results) must come from the record or the conversation: never "
++    "invent them, and say 'not recorded' when something is missing. Use your medical knowledge for possible "
++    "diagnoses and usual treatment. "
+     # group test 10 Nov (D1): "the chatbot just regurgitates what the user inputs" - it restated the record first
+-    "Answer the question that was asked, in your first sentence. Keep it short: at most 5 short sentences or "
+-    "bullet points. Do not repeat or summarise the record unless you are asked to. "
+-    # group retest 14 Nov (Caleb, P05): "NEWS2 score is 1, indicating a HIGH risk" for a child with BP and RR missing
+-    "NEWS2 0-4 is a low score. If the record says the risk was escalated because core vital signs could not be "
+-    "recorded, say the risk is treated as high because those signs are missing, not because the score is high.")
++    "Answer the question that was asked, in your first sentence. Do not summarise or repeat the record unless you "
++    "are asked to. If the question has typos or is unclear, answer its most likely meaning. "
++    "If asked for a diagnosis: list the 3 most likely diagnoses, most likely first, each with the findings in the "
++    "record that support it and the test that would confirm or rule it out. Call them possible diagnoses. "
++    "If asked for treatment or medication: give the usual first-line emergency department treatment for the most "
++    "likely diagnosis, with typical adult dose and route, and what to check first (allergies, weight, kidney "
++    "function, pregnancy, and anything in the record that rules a drug out). Say it is a suggestion for the "
++    "clinician to confirm against local protocol. "
++    "Keep it short: at most 8 short bullet points. "
++    # group retest 14 Nov (Caleb, P05): "NEWS2 score is 1, indicating a HIGH risk"; 16 Nov: "NEWS2 6 (low)"
++    "NEWS2 bands: 0-4 low, 5-6 medium, 7 or more high. If the record says the risk was escalated because core vital "
++    "signs could not be recorded, say the risk is treated as high because those signs are missing, not because the "
++    "score is high.")
+ 
+ FRACTURE_QUESTION = ("Is a bone fracture visible on this X-ray? Give a short reason, then finish with a last line "
+                      "that says exactly ANSWER: YES or ANSWER: NO.")
+-- 
+2.56.0.windows.2
+
