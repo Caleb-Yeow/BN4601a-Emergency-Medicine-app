@@ -18,6 +18,7 @@ repo is [likingood16/BN4601A](https://github.com/likingood16/BN4601A); the snaps
 | [`patches/chat_fix_16Nov/`](patches/chat_fix_16Nov/) | Optional chat improvement. **Not** applied to `app_snapshot/` |
 | [`experiments/image_model_testing/`](experiments/image_model_testing/) | Early image-model pipeline experiments and summary metrics |
 | [`docs/`](docs/) | User guide, Gradio guide and the 13 Nov retest sheet (PDF) |
+| [`environment/`](environment/) | Exact Python package versions and how to rebuild the environment |
 
 ## Run the app
 
